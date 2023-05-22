@@ -1,0 +1,21 @@
+export default {
+  'request.200': '服务器成功返回请求的数据。',
+  'request.201': '新建或修改数据成功。',
+  'request.202': '一个请求已经进入后台排队（异步任务）。',
+  'request.204': '删除数据成功。',
+  'request.400': '发出的请求有错误，服务器没有进行新建或修改数据的操作。',
+  'request.401': 'Your authorization has expired, please login again.',
+  'request.403': 'You temporarily has no authority to manage this resource',
+  'request.404': '发出的请求针对的是不存在的记录，服务器没有进行操作。',
+  'request.406': '请求的格式不可得。',
+  'request.410': '请求的资源被永久删除，且不会再得到的。',
+  'request.422': '当创建一个对象时，发生一个验证错误。',
+  'request.500': 'There are something wrong with the server, please try again later.',
+  'request.502': 'Gateway Error',
+  'request.503': '服务不可用，服务器暂时过载或维护。',
+  'request.504': 'Gateway Timeout',
+  'request.error': 'Request Error',
+  'request.network-error': 'Network Error',
+  'request.network-error-desc':
+    'There are some problems of your network, can not connect to the server.',
+};

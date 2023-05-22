@@ -11,6 +11,7 @@ const Settings: LayoutSettings & {
   contentWidth: 'Fluid',
   fixedHeader: false,
   fixSiderbar: true,
+  // 颜色弱化,
   colorWeak: false,
   title: 'admin',
   pwa: false,
