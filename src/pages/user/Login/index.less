@@ -1,16 +1,16 @@
-@import (reference) '~antd/es/style/themes/index';
+@import '~antd/es/style/themes/default.less';
 
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: auto;
-  background: @layout-body-background;
+/* 语言选择 */
+.selectLang {
+  color: black;
 }
 
 .lang {
+  position: absolute;
+  top: 0;
+  z-index: 2;
   width: 100%;
-  height: 40px;
+  height: 44px;
   line-height: 44px;
   text-align: right;
   :global(.ant-dropdown-trigger) {
@@ -18,33 +18,207 @@
   }
 }
 
+/* 主要内容 */
+.container {
+  min-width: 1280px;
+  height: 100%;
+  overflow: auto; // 超出范围会有滚动条
+  background: @layout-body-background url('/bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
 .content {
-  flex: 1;
-  padding: 32px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 120px);
+  margin-top: 60px;
+  padding: 82px 140px 22px 0;
+  background: @layout-body-background url('/loginBackground.svg') no-repeat;
+  background-size: cover;
 }
 
-@media (min-width: @screen-md-min) {
-  .container {
-    background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
-    background-repeat: no-repeat;
-    background-position: center 110px;
-    background-size: 100%;
+.linesContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: calc(100% + 60px);
+  background: url('/lines.png') no-repeat 30% 0;
+  background-size: 55% 100%;
+}
+
+.contentInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.center {
+  &--left {
+    flex: 1;
+    padding-left: 100px;
+    background: #d8dce1;
   }
 
+  &--right {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0; // 不伸缩
+    width: 400px;
+    margin-left: 100px;
+    padding: @padding-lg;
+    background: #fff;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: @box-shadow-base;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.imageDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9%;
+  height: 100%;
+  background-image: url('/leftAngle.png');
+  background-size: 100% 100%;
+}
+
+:global(.ant-layout-footer).footer {
+  justify-self: flex-end;
+  margin-left: 70px;
+  background: transparent;
+
+  :global(.ant-pro-global-footer) {
+    margin: 24px 0 0 0;
+  }
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 24px;
+  line-height: 44px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  height: 44px;
+  vertical-align: top;
+}
+
+.logoSpacer {
+  margin-bottom: @margin-md;
+}
+
+.title {
+  position: relative;
+  top: 2px;
+  color: @heading-color;
+  // font-weight: lighter;
+  font-size: 28px;
+}
+
+.desc {
+  margin-top: 12px;
+  margin-bottom: 40px;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.browserWarning {
+  font-size: 12px;
+
+  img {
+    width: 16px !important;
+  }
+}
+
+// Media Query
+@media all and (min-width: @screen-xl-min) {
   .content {
-    padding: 32px 0 24px;
+    padding: 50px 160px 32px 0;
+  }
+
+  :global(.ant-layout-footer).footer {
+    margin-left: 80px;
+  }
+
+  .center {
+    &--left {
+      padding-left: 160px;
+    }
+
+    &--right {
+      width: 420px;
+      margin-left: 100px;
+    }
   }
 }
 
-.icon {
-  margin-left: 8px;
-  color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  vertical-align: middle;
-  cursor: pointer;
-  transition: color 0.3s;
+@media all and (min-width: @screen-xxl-min) {
+  .center {
+    &--right {
+      width: 520px;
+      margin-left: 140px;
+    }
+  }
+}
 
-  &:hover {
-    color: @primary-color;
+/* 2k屏 */
+@media all and (min-width: 2560px) {
+  .content {
+    padding: 80px 200px 62px 0;
+  }
+
+  :global(.ant-layout-footer).footer {
+    margin-left: 100px;
+  }
+
+  .center {
+    &--left {
+      padding-left: 200px;
+    }
+
+    &--right {
+      width: 620px;
+      margin-left: 140px;
+    }
+  }
+}
+
+/* 带鱼屏 */
+@media all and (min-width: 3440px) and (min-height: 1240px) and (max-height: 1660px) {
+  .content {
+    padding: 80px 600px 62px 0;
+  }
+
+  :global(.ant-layout-footer).footer {
+    margin-left: 300px;
+  }
+
+  .center {
+    &--left {
+      padding-left: 600px;
+    }
   }
 }

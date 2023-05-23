@@ -1,0 +1,17 @@
+@import '~antd/es/style/themes/default.less';
+
+.browserWarning {
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  background: @warning-color;
+  box-shadow: @box-shadow-base;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+  }
+}

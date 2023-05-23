@@ -7,6 +7,18 @@ import settingDrawer from './en-US/settingDrawer';
 import settings from './en-US/settings';
 
 export default {
+  // 全局定义
+  'global.query': 'Query',
+  'global.clear': 'Clear',
+  'global.cancel': 'Cancel',
+  'global.confirm': 'OK',
+  'global.title': 'Yizit EQMS V1.4',
+  'global.select-all': 'Select All',
+  'global.portfolio': 'Portfolio',
+  'global.page-items-total': '{total} Records Total',
+  'global.action': 'Operate',
+  'global.system-config': 'System Config',
+
   'navBar.lang': 'Languages',
   'layout.user.link.help': 'Help',
   'layout.user.link.privacy': 'Privacy',

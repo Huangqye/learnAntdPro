@@ -7,6 +7,18 @@ import settingDrawer from './zh-CN/settingDrawer';
 import settings from './zh-CN/settings';
 
 export default {
+  // 全局定义
+  'global.query': '查询',
+  'global.clear': '清除',
+  'global.cancel': '取消',
+  'global.confirm': '确定',
+  'global.title': 'YIZIT QMS V1.4',
+  'global.select-all': '全选',
+  'global.portfolio': '项目集',
+  'global.page-items-total': '共 {total} 条',
+  'global.action': '操作',
+  'global.system-config': '系统配置',
+
   'navBar.lang': '语言',
   'layout.user.link.help': '帮助',
   'layout.user.link.privacy': '隐私',
